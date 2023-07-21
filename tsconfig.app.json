@@ -1,0 +1,25 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.ts", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*", "node_modules", "mock", "build", "dist"],
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
+
+    "composite": true,
+    "types": ["vite-plugin-pages/client", "vite-plugin-vue-layouts/client"]
+  }
+}
